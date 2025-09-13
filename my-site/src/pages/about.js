@@ -1,14 +1,17 @@
-import Navbar from "../components/Navbar"
-
 import * as React from "react"
-import { Link } from "gatsby"
+import Layout from "../components/layout"
 
-const AboutPage = () => (
-  <main>
-    <h1>About Us</h1>
-    <p>This is the About page of our Gatsby POC project.</p>
-    <Link to="/">Go Home</Link>
-  </main>
-)
+const AboutPage = () => {
+  return (
+    <Layout>
+      <h1>About Us</h1>
+      <p>
+        Welcome to the About page!  
+        This site was built using <strong>Gatsby</strong>.  
+        Here we’ll share information about our mission, team, and journey.
+      </p>
+    </Layout>
+  )
+}
 
 export default AboutPage

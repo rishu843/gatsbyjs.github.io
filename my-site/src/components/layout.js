@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -25,6 +25,22 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
+      {/* ✅ Navbar Added Here */}
+      <nav
+        style={{
+          display: "flex",
+          gap: "20px",
+          background: "#282c34",
+          padding: "10px",
+          marginBottom: "20px",
+        }}
+      >
+        <Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link>
+        <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
+        <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
+      </nav>
+
       <div
         style={{
           margin: `0 auto`,
@@ -39,8 +55,7 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
+          © {new Date().getFullYear()} &middot; Built with{" "}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>

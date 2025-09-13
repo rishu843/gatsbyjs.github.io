@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar"
 
 import * as React from "react"
 import { Link } from "gatsby"
@@ -72,7 +71,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-	 <Navbar />
+	
 
     <div className={styles.textCenter}>
       <StaticImage
