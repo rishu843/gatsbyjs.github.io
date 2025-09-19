@@ -9,6 +9,7 @@ const AboutPage = () => {
         Welcome to the About page!  
         This site was built using <strong>Gatsby</strong>.  
         Here we’ll share information about our mission, team, and journey.
+        how are you.
       </p>
     </Layout>
   )
